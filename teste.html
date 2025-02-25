@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia Suporte</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      function validateInput(event) {
+        const regex = /^[0-9]*$/
+        if (!regex.test(event.key)) event.preventDefault()
+      }
+
+      function formatInput(event) {
+        event.target.value = event.target.value.replace(/[.\-]/g, "")
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          src="./assets/avatar.png"
+          alt="homem de camisa preta, fundo azul"
+        />
+        <p>Links rápidos</p>
+      </div>
+
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a href="https://wzstats.gg/pt" target="_blank">Meta da semana</a>
+        </li>
+
+        <li>
+          <a href="https://wzstats.gg/pt/warzone-2/top-250" target="_blank"
+            >Top Global</a
+          >
+        </li>
+      </ul>
+
+      <div id="social-links"></div>
+      <footer>
+        Feito com ♥ pela
+        <a href="https://rocketseat.com.br" target="_blank">Dev Cê</a>
+      </footer>
+
+      <script
+        type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      ></script>
+      <script src="./script.js"></script>
+    </div>
+  </body>
+</html>
